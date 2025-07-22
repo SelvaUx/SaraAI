@@ -1,6 +1,3 @@
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/90cc662e-4d05-4f0b-8e5f-62c074b0f54b" />
-
-
 # **Sara AI**
 
 Sara AI is an intelligent virtual assistant built with Python. It allows you to control applications, search for information, interact with various utilities, and provides a **Jarvis-like** speaking experience. This AI can also perform actions such as opening applications, taking screenshots, and answering questions using **Wikipedia**.
