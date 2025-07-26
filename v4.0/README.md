@@ -188,7 +188,7 @@ dotnet --version
 
 1. **Download Project**
    ```bash
-   git clone https://github.com/SelvaUx/SaraAI_CSharp.git
+   git clone https://github.com/SelvaUx/SaraAI.git
    cd SaraAI_CSharp
    ```
    
