@@ -185,7 +185,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 💌 Quotes That Guide Me
 
 > "Knowledge is my power. Code is my weapon. Kindness is my rule."  
-— **Selva Pandi Francis**
+— **Selva Pandi**
 
 > "Build your own lab. Code your own world. Create your own future."  
 — *Inspired by Iron Man*
