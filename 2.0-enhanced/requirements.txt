@@ -1,0 +1,10 @@
+pyautogui
+pyttsx3
+speechrecognition
+pyaudio
+wikipedia
+pyjokes
+opencv-python
+mediapipe
+numpy
+vosk        # optional for offline STT
