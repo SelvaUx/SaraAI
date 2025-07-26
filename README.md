@@ -4,178 +4,200 @@
 ---
 
 ## 📌 Table of Contents
-1. [Introduction](#introduction)
-2. [Version Overview](#version-overview)
-3. [Features](#features)
-4. [Command Cheat-Sheet](#command-cheat-sheet)
-5. [Installation](#installation)
-6. [Usage](#usage)
-7. [Developer Details](#developer-details)
-8. [Troubleshooting](#troubleshooting)
-9. [Contributing](#contributing)
+1. [Introduction](#1️⃣-introduction)
+2. [Version Overview](#2️⃣-version-overview)
+3. [Features](#3️⃣-features)
+4. [Command Cheat-Sheet](#4️⃣-command-cheat-sheet)
+5. [Installation](#5️⃣-installation)
+6. [Usage](#6️⃣-usage)
+7. [Developer Details](#7️⃣-developer-details)
+8. [Troubleshooting](#8️⃣-troubleshooting)
+9. [Contributing](#9️⃣-contributing)
 10. [License](#license)
-11. [GitHub Stats](#github-stats)
 
 ---
 
 ## 1️⃣ Introduction
-Sara AI is a multi-version, Python and C# based desktop assistant that responds to text commands to perform tasks like opening apps, searching Google, checking time and date, reading Wikipedia summaries, telling jokes, and taking screenshots. It includes text-to-speech feedback for a smart assistant experience.
+Sara AI is a multi-version, voice-powered desktop assistant designed to make your PC experience smarter and more intuitive. With versions built in Python and C#, Sara AI can open apps, perform web searches, control media, take screenshots, manage files, and even generate code using voice commands. It is designed to run offline, ensuring privacy while delivering a seamless experience.
 
 ---
 
 ## 2️⃣ Version Overview
-Sara AI evolves across five major versions, each with unique capabilities:
+Sara AI has evolved through several versions, each adding more capabilities and features. Here’s a summary of what each version offers:
 
-| Version | Language | Core Features | Superpowers |
-|---|---|---|---|
-| **v1 Basic** | Python 3.11 | App launching, time, date, screenshot, Wikipedia | Basic commands |
-| **v2.0 Wake-Word** | Python 3.11 | Wake-word, music, YouTube | Voice activation |
-| **2.0 Enhanced** | Python 3.11 | Macros, file ops, face unlock, gestures | Enhanced control |
-| **v3.0 LLM** | Python 3.11 | Local LLM, voice-to-code | Advanced AI |
-| **v4.0 C#** | C# .NET 8 | Native .exe, full Windows automation | Full PC automation |
+- **v1 Basic**: Basic assistant features like launching apps, checking the time and date, taking screenshots, and Wikipedia summaries.
+- **v2.0 Wake-Word**: Adds wake-word activation, music control, and YouTube search for an enhanced voice experience.
+- **v2.0 Enhanced**: Further improvements with macros, file operations, face unlock, and gesture recognition.
+- **v3.0 LLM**: Introduces local language model support, and voice-to-code functionality, allowing more advanced AI-powered actions.
+- **v4.0 C#**: Full Windows automation with a native `.exe` application for streamlined, efficient performance.
 
 ---
 
 ## 3️⃣ Features
-- **Voice-Powered Control**: Use voice commands to perform tasks.
-- **Voice-to-Code**: Dictate code snippets into editors.
-- **Experimental Biometrics**: Face unlock and gesture recognition.
-- **File & Task Operations**: Manage files and system processes.
-- **Media Control**: Control media playback with voice commands.
-- **Power Management**: Shutdown, restart, or lock your computer.
+### **Core Features:**
+- **Voice-Powered Control**: Control your computer completely via voice commands.
+- **Voice-to-Code**: Dictate code directly into editors for Python, HTML, C++, and more.
+- **Biometric Authentication**: Includes experimental features like face unlock and gesture recognition.
+- **File & Task Management**: Create, delete, and move files or folders, and manage system processes.
+- **Media Control**: Play, pause, and adjust the volume of music, videos, and more.
+- **Power Management**: Safely shutdown, restart, or lock your computer with a single command.
 
 ---
 
-### 4️⃣ Command Cheat-Sheet
-Say **“Hey Sara”** (in v2+) and then any phrase below.
+## 4️⃣ Command Cheat-Sheet
 
-| Category | Command | Example | Result |
-|---|---|---|---|
-| **Web & Search** | `search climate change` | Google search |
-|  | `youtube never gonna give you up` | YouTube search |
-|  | `open website stackoverflow.com` | Browser launch |
-| **Apps & Windows** | `open notepad` | App opening |
-|  | `kill task chrome.exe` | Force-close app |
-|  | `list tasks` | Process list |
-| **Code Writing Assistant** | `create project MySite` | Folder creation |
-|  | `write code login page` | HTML in Notepad |
-|  | `write code hello python` | Python code |
-|  | `write code cpp main` | C++ main |
-| **File & Folder** | `create folder Reports` | Folder creation |
-|  | `create file todo.txt` | File creation |
-|  | `list files` | Directory listing |
-|  | `move file todo.txt to Reports` | File relocation |
-|  | `delete file old.docx` | File deletion |
-| **Media & System** | `play music` | Music playback |
-|  | `pause music` | Playback toggle |
-|  | `next track` | Song skip |
-|  | `volume up` | Volume adjust |
-|  | `mute` | Mute toggle |
-|  | `brightness 60` | Brightness adjust |
-| **Power & Security** | `shutdown now` | Shutdown |
-|  | `restart pc` | Reboot |
-|  | `lock` | Screen lock |
-|  | `face unlock` | Face unlock |
-| **Gestures & Experimental** | `start gestures` | Gesture start |
-| **Classic Utilities** | `screenshot` | Screen capture |
-|  | `time` | Time display |
-|  | `date` | Date display |
+**Activate Sara AI**: Say **"Hey Sara"** (in versions v2+), then follow with any of the commands below:
+
+- **Web & Search**:
+  - `search <query>` – Perform a Google search
+  - `youtube <video name>` – Search YouTube
+  - `open website <URL>` – Open a website in your browser
+  
+- **Apps & Windows**:
+  - `open <app name>` – Launch an app (e.g., Notepad)
+  - `kill task <task name>` – Force-close an app or task
+  - `list tasks` – List running processes
+
+- **Code Writing**:
+  - `create project <project name>` – Create a new project folder
+  - `write code <language>` – Create code snippets in Python, C++, HTML, etc.
+
+- **File Operations**:
+  - `create folder <folder name>` – Create a new folder
+  - `move file <file> to <folder>` – Move a file to a folder
+  - `delete file <file>` – Delete a file
+
+- **Media Control**:
+  - `play music` – Start playing music
+  - `pause music` – Pause the current track
+  - `volume up` – Increase volume
+  - `mute` – Mute the sound
+  
+- **Power & Security**:
+  - `shutdown now` – Shutdown the PC
+  - `restart pc` – Reboot the computer
+  - `lock` – Lock the screen
+  
+- **Experimental Features**:
+  - `start gestures` – Begin gesture recognition
+  - `face unlock` – Unlock PC using face recognition
 
 ---
 
-### 5️⃣ Installation
-#### Prerequisites
+## 5️⃣ Installation
+
+### Prerequisites:
 - **Python 3.11** (or later) for Python versions
 - **.NET 6.0 SDK** for C# version
 - **pip** (Python package manager)
 
-### Steps
-1. **Clone the Repository**
+### Installation Steps:
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/SelvaUx/SaraAI.git
+   git clone https://github.com/SelvaUx/SaraAI.git  
    cd SaraAI
-   ```
 
-2. **Create a Virtual Environment (optional but recommended)**
+2. **Set Up Virtual Environment (optional but recommended)**:
+
    ```bash
    python -m venv .venv
    .\.venv\Scripts\activate
    ```
 
-3. **Install Dependencies**
+3. **Install Dependencies**:
+
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Run the Application**
+4. **Run the Application**:
+
    ```bash
    python main.py
    ```
 
-5. **Activate by Saying: "Hey Sara"**
+5. **Activate by Saying**: "Hey Sara"
 
 ---
 
-### 6️⃣ Usage
-Activate Sara AI by saying "Hey Sara" and then follow with any command from the [Command Cheat-Sheet](#command-cheat-sheet).
+## 6️⃣ Usage
+
+Once installed, you can activate Sara AI by saying "Hey Sara", followed by any command from the [Command Cheat-Sheet](#command-cheat-sheet). Sara AI will respond to you, perform the requested tasks, and provide text-to-speech feedback.
 
 ---
 
-### 7️⃣ Developer Details
-**Selva Pandi Francis**  
-*ECE Student | Innovator | Futuristic Tech Developer*
+## 7️⃣ Developer Details
 
-- **Passion**: Futuristic AI, embedded systems, and full PC automation.
-- **Inspiration**: Iron Man’s JARVIS.
-- **Vision**: Building a real-world intelligent assistant that controls everything—offline, real-time, and voice-first.
+**Selva Pandi**
+*Innovator, Tech Developer, ECE Student*
 
-**Connect with Selva:**
-- 📧 **Email**: selva.ux@yahoo.com
-- 🐙 **GitHub**: [SelvaUx](https://github.com/SelvaUx)
-- 📸 **Instagram**: [selva.ux](https://www.instagram.com/selva.ux/)
+* **Passion**: Futuristic AI, Embedded Systems, Full PC Automation
+* **Inspiration**: Iron Man’s JARVIS
+* **Vision**: Building a real-world intelligent assistant that can control everything—offline, real-time, and voice-first.
+
+**Contact Information**:
+
+* 📧 **Email**: [selva.ux@yahoo.com](mailto:selva.ux@yahoo.com)
+* 🐙 **GitHub**: [SelvaUx](https://github.com/SelvaUx)
+* 📸 **Instagram**: [selva.ux](https://www.instagram.com/selva.ux/)
 
 ---
 
 ## 8️⃣ Troubleshooting
-### Common Issues
-| Error | Fix |
-|---|---|
-| `cv2 not found` | `pip install opencv-python` |
-| `microphone not detected` | Run Windows mic troubleshooter |
-| `permission denied` | Launch terminal as Administrator |
-| `antivirus blocks` | Add project folder to exclusions |
+
+### Common Issues and Fixes:
+
+* **`cv2 not found`**:
+  Run: `pip install opencv-python`
+* **`microphone not detected`**:
+  Use Windows troubleshooter for microphone issues.
+* **`permission denied`**:
+  Launch terminal as Administrator.
+* **`antivirus blocks`**:
+  Add the project folder to your antivirus exclusions.
 
 ---
 
-### 9️⃣ Contributing
-Feel free to fork the repository, make changes, and create pull requests. Contributions are always welcome!
+## 9️⃣ Contributing
 
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+### How to Contribute:
 
-### Code Style
-- Follow PEP 8 guidelines
-- Use type hints where possible
-- Add docstrings to functions
-- Keep functions focused and small
+1. **Fork the Repository**: Create a personal copy of the project.
+2. **Create a Feature Branch**: Branch off from `main`.
+3. **Make Changes**: Add your enhancements or bug fixes.
+4. **Submit a Pull Request**: Create a PR with your changes.
 
----
+### Code Style Guidelines:
 
-### 🔟 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+* Follow **PEP 8** for Python code.
+* Use **type hints** where applicable.
+* Keep functions **small and focused**.
+* Add **docstrings** to all functions and methods.
 
 ---
 
-"Join the journey of creating a real-world intelligent assistant that controls everything—offline, real-time, and voice-first. Let's build the future together!"
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+## 💌 Quotes That Guide Me
+
+> "Knowledge is my power. Code is my weapon. Kindness is my rule."  
+— **Selva Pandi Francis**
+
+> "Build your own lab. Code your own world. Create your own future."  
+— *Inspired by Iron Man*
+
+> "The one who understands time can design the future."  
+— *The Future Physicist in Me*
+
+Let’s build the impossible — together.
+
+"Join us in building a world where technology makes life easier, smarter, and more efficient. Let's create the future together!"
 
 Love,
-
-Selva Pandi & the Sara AI Team ✨
+**Selva Pandi & the Sara AI Team ✨**
 
 ---
-
-**Enjoy your personal AI assistant! 🤖**
