@@ -1,187 +1,284 @@
-# 🚀 Sara AI – Multi-Version Personal PC Assistant
-Your voice-activated, offline desktop assistant for Windows.
+# 🤖 SaraAI – Multi-Version Personal PC Assistant
+Your **Jarvis-like, voice-activated, offline desktop assistant** for Windows.  
+Multi-language, modular, and designed for **real-time PC automation**.
 
 ---
 
-## 📌 Table of Contents
-- Introduction  
-- Version Overview  
-- Features  
-- Command Cheat-Sheet  
-- Installation  
-- Usage  
-- Developer Details  
-- Troubleshooting  
-- Contributing  
-- License  
+## 📋 Table of Contents
 
----
+  * [Introduction](https://www.google.com/search?q=%23introduction)
+  * [Version Overview](https://www.google.com/search?q=%23version-overview)
+  * [Features](https://www.google.com/search?q=%23features)
+  * [Architecture & Data Flow](https://www.google.com/search?q=%23architecture--data-flow)
+  * [Project Structure](https://www.google.com/search?q=%23project-structure)
+  * [Command Cheat-Sheet](https://www.google.com/search?q=%23command-cheat-sheet)
+  * [Installation](https://www.google.com/search?q=%23installation)
+  * [Usage](https://www.google.com/search?q=%23usage)
+  * [Developer Details](https://www.google.com/search?q=%23developer-details)
+  * [Troubleshooting](https://www.google.com/search?q=%23troubleshooting)
+  * [Contributing](https://www.google.com/search?q=%23contributing)
+  * [License](https://www.google.com/search?q=%23license)
+  * [Quotes That Guide Me](https://www.google.com/search?q=%23quotes-that-guide-me)
+
+-----
 
 ## 1️⃣ Introduction
-Sara AI is a multi-version, voice-powered desktop assistant designed to make your PC experience smarter and more intuitive. With versions built in Python, C#, and now multi-language modular design, Sara AI can open apps, perform web searches, control media, take screenshots, manage files, and even generate code using voice commands.  
 
-It is designed to run **offline**, ensuring **privacy and speed** while delivering a seamless experience.  
+Sara AI is a multi-version, voice-powered desktop assistant designed to make your PC experience smarter and more intuitive.
 
----
+Built across **Python, C\#, C++, Java, Rust, and JavaScript**, Sara AI evolves from simple offline commands to a **multi-language modular ecosystem** with **real-time dashboards, knowledge bases, and natural speech**.
+
+It runs **fully offline**, ensuring **privacy, speed, and control**.
+
+-----
 
 ## 2️⃣ Version Overview
-Sara AI has evolved through several versions, each adding more capabilities and features.  
 
-- **v1 Basic**: Basic assistant features like launching apps, checking the time and date, taking screenshots, and Wikipedia summaries.  
-- **v2.0 Wake-Word**: Adds wake-word activation, music control, and YouTube search for an enhanced voice experience.  
-- **v2.0 Enhanced**: Further improvements with macros, file operations, face unlock, and gesture recognition.  
-- **v3.0 LLM**: Introduces local language model support and voice-to-code functionality, allowing more advanced AI-powered actions.  
-- **v4.0 C#**: Full Windows automation with a native `.exe` application for streamlined, efficient performance.  
-- **v5.0 Multi-Language (Latest)**: A **Jarvis-like modular AI assistant** that uses **Python, C++, Java, C#, Rust, and JavaScript**. Includes:  
-  - Offline speech recognition (C++ – Whisper.cpp, Vosk)  
-  - Natural TTS (Java – MaryTTS, FreeTTS)  
-  - System Control (C# – full OS integration)  
-  - Knowledge base (Rust + SQLite)  
-  - Real-time dashboard (JavaScript Web UI)  
-  - AI orchestration (Python core with FastAPI)  
+Sara AI has evolved through several versions, each adding more capabilities:
 
----
+  * **v1.0 Basic** → Launch apps, check time/date, screenshots, Wikipedia summaries.
+  * **v2.0 Wake-Word** → Wake-word activation, music control, YouTube search.
+  * **v2.0 Enhanced** → Macros, file operations, face unlock, gesture recognition.
+  * **v3.0 LLM** → Local LLM integration, voice-to-code functionality.
+  * **v4.0 C\#** → Full Windows automation with a `.exe` app.
+  * **v5.0 Multi-Language (Latest)** → Complete **modular AI system**:
+      * 🎙️ **C++ Speech-to-Text** (Whisper.cpp, Vosk)
+      * 🔊 **Java Text-to-Speech** (MaryTTS, FreeTTS)
+      * ⚙️ **C\# System Control** (Windows API)
+      * 📚 **Rust Knowledge Base** (SQLite full-text search)
+      * 🌐 **JavaScript Dashboard** (WebSocket real-time UI)
+      * 🧠 **Python Core Orchestrator** (FastAPI, asyncio)
+
+-----
 
 ## 3️⃣ Features
-### Core Features
-- 🎙️ **Voice-Powered Control**: Control your computer completely via voice commands.  
-- 💻 **System Automation**: Open apps, manage files, kill tasks, shutdown/restart/lock.  
-- 🎶 **Media Control**: Play, pause, adjust volume, mute/unmute.  
-- 📂 **File Management**: Create, delete, move, and organize folders/files.  
-- 🔐 **Security & Biometrics**: Face unlock & gesture recognition (experimental).  
-- 👩‍💻 **Voice-to-Code**: Dictate code in Python, HTML, C++, and more.  
 
-### v5.0 Exclusive Features  
-- ⚙️ **Multi-Language Modular Design** (Python, C++, Java, C#, Rust, JavaScript)  
-- 🧠 **AI Orchestration** with intelligent command routing  
-- 📚 **Local Knowledge Base** with fast search (Rust + SQLite)  
-- 🔊 **Natural TTS** with multiple voices (Java)  
-- 🌐 **Interactive Dashboard** (JavaScript Web UI with real-time updates)  
-- 🚀 **Asynchronous Module Communication** via REST, WebSocket, and IPC  
+### Core Features (all versions)
 
----
+  * 🎙️ **Voice-Powered Control** – Full PC control via voice
+  * 💻 **System Automation** – Open apps, manage files, shutdown/restart
+  * 🎶 **Media Control** – Play, pause, adjust volume, mute
+  * 📂 **File Management** – Create, move, delete files & folders
+  * 🔐 **Biometric Security** – Face unlock, gesture recognition (experimental)
+  * 👩‍💻 **Voice-to-Code** – Generate code in Python, HTML, C++
 
-## 4️⃣ Command Cheat-Sheet
-### Web & Search  
-- `search <query>` – Google search  
-- `youtube <video name>` – Search YouTube  
-- `open website <URL>` – Open a website  
+### v5.0 Exclusive
 
-### Apps & Windows  
-- `open <app name>` – Launch an app  
-- `kill task <task name>` – Force-close app  
-- `list tasks` – List running processes  
+  * ⚙️ **Multi-Language Modular Design**
+  * 🧠 **AI Orchestration** (intelligent command routing)
+  * 📚 **Local Knowledge Base** (Rust + SQLite)
+  * 🔊 **Natural Speech Responses** (Java TTS)
+  * 🌐 **Interactive Web Dashboard** (JavaScript UI)
+  * 🚀 **Asynchronous Communication** (REST, WebSocket, IPC, Message Queues)
 
-### Code Writing  
-- `create project <project name>` – New project folder  
-- `write code <language>` – Code snippet generation  
+-----
 
-### File Operations  
-- `create folder <name>` – New folder  
-- `move file <file> to <folder>` – Move file  
-- `delete file <file>` – Delete file  
+## 4️⃣ Architecture & Data Flow
 
-### Media Control  
-- `play music`, `pause music`  
-- `volume up`, `mute`  
+```
+User speaks (🎙️)
+       ↓
+STT (C++) converts voice to text
+       ↓
+Python Core (🧠) receives text and decides the task
+       ↓
+┌────────────┬─────────────┬───────────┐
+│            │             │           │
+▼            ▼             ▼           ▼
+TTS (Java)   System (C#)   Search (Rust)
+Response     System        Knowledge
+needed       command       query
+│            │             │
+└────────────┴─────────────┴───────────┘
+       ↓
+Dashboard (🌐) updates in real-time
+```
 
-### Power & Security  
-- `shutdown now`, `restart pc`, `lock`  
+-----
 
-### Experimental  
-- `start gestures` – Gesture recognition  
-- `face unlock` – Unlock via face  
+## 5️⃣ Project Structure
 
----
+```text
+saraai-5.0/
+├── core-python/        # 🧠 Main orchestrator & AI logic
+│   ├── src/
+│   ├── requirements.txt
+│   └── main.py
+├── speech-cpp/         # 🎙️ Speech-to-text processing
+│   ├── src/
+│   ├── include/
+│   └── CMakeLists.txt
+├── tts-java/           # 🔊 Text-to-speech generation
+│   ├── src/
+│   ├── pom.xml
+│   └── build.gradle
+├── system-csharp/      # ⚙️ Windows system integration
+│   ├── src/
+│   └── SystemControl.csproj
+├── knowledge-rust/     # 📚 Knowledge base and search
+│   ├── src/
+│   ├── Cargo.toml
+│   └── database/
+├── dashboard-js/       # 🌐 Web-based UI
+│   ├── public/
+│   ├── src/
+│   └── package.json
+├── config/             # ⚙️ Config files
+├── docs/               # 📖 Documentation
+├── scripts/            # 🔧 Build & setup scripts
+└── README.md
+```
 
-## 5️⃣ Installation
+-----
+
+## 6️⃣ Command Cheat-Sheet
+
+### Web & Search
+
+```
+search <query> → Google search
+youtube <video> → YouTube search
+open website <url> → Open site
+```
+
+### Apps & Windows
+
+```
+open <app> → Launch app
+kill task <name> → Force-close app
+list tasks → Show processes
+```
+
+### Files
+
+```
+create folder <name>
+move file <src> to <dest>
+delete file <name>
+```
+
+### Media
+
+```
+play music, pause music
+volume up, mute
+```
+
+### Power & Security
+
+```
+shutdown now, restart pc, lock
+```
+
+### Experimental
+
+```
+start gestures → Gesture control
+face unlock → Unlock via face
+```
+
+-----
+
+## 7️⃣ Installation
+
 ### Prerequisites
-- Python 3.11+ (Core logic)  
-- .NET 6.0 SDK (C# modules)  
-- C++ Compiler (Whisper.cpp / Vosk STT)  
-- Java 11+ (MaryTTS / FreeTTS TTS)  
-- Rust 1.70+ (Knowledge base)  
-- Node.js 18+ (Dashboard)  
+
+  * **Python 3.11+**
+  * **.NET 6.0 SDK**
+  * **C++ Compiler** (MSVC/GCC)
+  * **Java 11+**
+  * **Rust 1.70+**
+  * **Node.js 18+**
 
 ### Setup
-```bash
+
+1.  Clone the repository and navigate into the directory.
+
+<!-- end list -->
+
+```
 git clone https://github.com/SelvaUx/SaraAI.git
 cd SaraAI
-````
+```
 
-Windows:
+2.  Run the setup and build scripts based on your OS.
 
-```bash
+**Windows:**
+
+```
 .\scripts\setup.bat
 .\scripts\build.bat
-python core-python/main.py
 ```
 
-Linux/Mac:
+**Linux/Mac:**
 
-```bash
+```
 ./scripts/setup.sh
 ./scripts/build.sh
+```
+
+3.  Launch the main Python script.
+
+<!-- end list -->
+
+```
 python core-python/main.py
 ```
 
-Activate by saying: **"Hey Sara"**
+Wake with: `"Hey Sara"`
 
----
+-----
 
-## 6️⃣ Usage
+## 8️⃣ Usage
 
-* Activate with **wake word** (`Hey Sara`)
-* Speak any command (from cheat sheet)
-* Watch tasks update in the **real-time dashboard**
+  * Speak a command → Sara executes instantly.
+  * Live updates on dashboard UI.
+  * Works fully offline.
 
----
+-----
 
-## 7️⃣ Developer Details
+## 9️⃣ Developer Details
 
-👨‍💻 **Selva Pandi**
+  * **👨‍💻 Name:** Selva Pandi
+  * **Role:** Innovator | Tech Developer | ECE Student
+  * **Inspiration:** Iron Man’s JARVIS
+  * **Vision:** A real-world AI operating system
+  * **📧 Email:** selva.ux@yahoo.com
+  * **🐙 GitHub:** [SelvaUx](https://www.google.com/search?q=https://github.com/SelvaUx)
+  * **📸 Instagram:** [selva.ux](https://www.google.com/search?q=https://instagram.com/selva.ux)
 
-* Innovator, Tech Developer, ECE Student
-* Passion: Futuristic AI, Embedded Systems, Full PC Automation
-* Inspiration: Iron Man’s JARVIS
-* Vision: Build a **real-world intelligent assistant** that controls everything, offline, in real-time.
+-----
 
-📧 Email: **[selva.ux@yahoo.com](mailto:selva.ux@yahoo.com)**
-🐙 GitHub: **[SelvaUx](https://github.com/SelvaUx)**
-📸 Instagram: **[selva.ux](https://instagram.com/selva.ux)**
+## 🔟 Troubleshooting
 
----
+  * **`cv2 not found`** → `pip install opencv-python`
+  * **`Mic not detected`** → Use the Windows Troubleshooter.
+  * **`permission denied`** → Run terminal as Administrator.
+  * **`Antivirus blocks`** → Add to exclusions.
 
-## 8️⃣ Troubleshooting
+-----
 
-* `cv2 not found`: `pip install opencv-python`
-* Mic not detected: Windows troubleshooter
-* `permission denied`: Run terminal as Admin
-* Antivirus blocking: Add project to exclusions
+## 1️⃣1️⃣ Contributing
 
----
+  * Fork the repo.
+  * Create feature branch.
+  * Submit PR.
+  * Follow PEP8, modular code, and docs.
 
-## 9️⃣ Contributing
+-----
 
-* Fork the repo
-* Create feature branch
-* Submit PR
-* Follow PEP8 (Python), proper docs, and clean modular code
+## 1️⃣2️⃣ License
 
----
+Distributed under the MIT License. See the `LICENSE` file for more information.
 
-## 🔟 License
-
-MIT License – see LICENSE file
-
----
+-----
 
 ## 💌 Quotes That Guide Me
 
-*"Knowledge is my power. Code is my weapon. Kindness is my rule."* — Selva Pandi
-*"Build your own lab. Code your own world. Create your own future."* — Inspired by Iron Man
-*"The one who understands time can design the future."* — The Future Physicist in Me
+> "Knowledge is my power. Code is my weapon. Kindness is my rule." — Selva Pandi
+> "Build your own lab. Code your own world. Create your own future." — Inspired by Iron Man
+> "The one who understands time can design the future." — The Future Physicist in Me
 
-✨ *Let’s build the impossible — together!*
+-----
 
-```
+## ✨ Let's build the impossible — together\!
