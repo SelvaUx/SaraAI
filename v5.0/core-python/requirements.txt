@@ -1,0 +1,45 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+asyncio-mqtt==0.11.1
+
+# HTTP client for inter-module communication
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Audio processing
+pyaudio==0.2.11
+scipy==1.11.4
+numpy==1.24.3
+
+# Configuration management
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Logging and monitoring
+structlog==23.2.0
+rich==13.7.0
+
+# Database for logging and state
+aiosqlite==0.19.0
+sqlalchemy==2.0.23
+
+# WebSocket support
+websockets==12.0
+websocket-client==1.6.4
+
+# Natural language processing
+nltk==3.8.1
+spacy==3.7.2
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Optional AI libraries
+# transformers==4.35.2  # For local LLM if needed
+# torch==2.1.1  # For local neural networks

@@ -1,0 +1,105 @@
+[package]
+name = "saraai-knowledge"
+version = "1.0.0"
+edition = "2021"
+authors = ["SaraAI Team"]
+description = "Knowledge base and search module for SaraAI"
+license = "MIT"
+repository = "https://github.com/saraai/saraai-5.0"
+keywords = ["ai", "knowledge-base", "search", "sqlite", "rust"]
+categories = ["database", "web-programming"]
+
+[lib]
+name = "saraai_knowledge"
+crate-type = ["lib", "cdylib"]
+
+[[bin]]
+name = "knowledge-server"
+path = "src/main.rs"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# Web framework
+warp = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "chrono", "uuid"] }
+
+# Full-text search
+tantivy = "0.21"
+
+# Date/time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# UUID generation
+uuid = { version = "1.6", features = ["v4", "serde"] }
+
+# Configuration
+config = "0.13"
+dotenvy = "0.15"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Text processing
+regex = "1.10"
+stemmer = "1.2"
+
+# HTTP client for inter-module communication
+reqwest = { version = "0.11", features = ["json"] }
+
+# Utility
+clap = { version = "4.4", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3.8"
+pretty_assertions = "1.4"
+
+[features]
+default = ["sqlite", "search"]
+sqlite = []
+search = []
+embedding = ["candle-core", "candle-nn", "candle-transformers"]
+
+# Optional dependencies for advanced features
+[dependencies.candle-core]
+version = "0.3"
+optional = true
+
+[dependencies.candle-nn] 
+version = "0.3"
+optional = true
+
+[dependencies.candle-transformers]
+version = "0.3"
+optional = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = true
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true
+codegen-units = 1
+overflow-checks = false
+strip = true
+
+[profile.test]
+opt-level = 1
+debug = true
+
+# Build script for database migrations
+[build-dependencies]
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "migrate"] }

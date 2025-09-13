@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 SaraAI 5.0 Dashboard</title>
+    <meta name="description" content="Real-time dashboard for SaraAI multi-language AI assistant">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- External dependencies -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- Main App Container -->
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <span>SaraAI 5.0</span>
+                    <span class="version">Dashboard</span>
+                </div>
+                
+                <div class="header-controls">
+                    <button id="settings-btn" class="btn btn-icon" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    
+                    <button id="fullscreen-btn" class="btn btn-icon" title="Toggle Fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    
+                    <div class="connection-status" id="connection-status">
+                        <div class="status-indicator offline"></div>
+                        <span>Connecting...</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Area -->
+        <main class="dashboard">
+            <!-- Left Panel - System Status -->
+            <aside class="sidebar">
+                <div class="panel">
+                    <h3><i class="fas fa-heartbeat"></i> System Status</h3>
+                    <div id="module-status" class="module-status">
+                        <!-- Module status will be populated dynamically -->
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3><i class="fas fa-microphone"></i> Voice Control</h3>
+                    <div class="voice-controls">
+                        <button id="voice-toggle" class="btn btn-primary">
+                            <i class="fas fa-microphone"></i>
+                            Start Listening
+                        </button>
+                        
+                        <div class="voice-status">
+                            <div class="voice-indicator">
+                                <div class="wave-animation">
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                </div>
+                            </div>
+                            <span id="voice-status-text">Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Panel - Main Display -->
+            <section class="main-content">
+                <div class="panel">
+                    <h3><i class="fas fa-comments"></i> Conversation</h3>
+                    <div id="conversation-log" class="conversation-log">
+                        <div class="message system">
+                            <div class="message-header">
+                                <i class="fas fa-robot"></i>
+                                <span>SaraAI</span>
+                                <time></time>
+                            </div>
+                            <div class="message-content">
+                                Hello! I'm SaraAI 5.0, your offline AI assistant. I'm ready to help you with voice commands, system control, and knowledge queries.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="message-input">
+                        <input type="text" id="text-input" placeholder="Type a message or command...">
+                        <button id="send-btn" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel - Analytics & Controls -->
+            <aside class="right-panel">
+                <div class="panel">
+                    <h3><i class="fas fa-chart-line"></i> Performance</h3>
+                    <div id="performance-metrics" class="metrics">
+                        <div class="metric">
+                            <span class="label">Response Time</span>
+                            <span class="value" id="response-time">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Commands Today</span>
+                            <span class="value" id="commands-today">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Uptime</span>
+                            <span class="value" id="uptime">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3><i class="fas fa-cogs"></i> Quick Actions</h3>
+                    <div class="quick-actions">
+                        <button class="action-btn" data-action="time">
+                            <i class="fas fa-clock"></i>
+                            Current Time
+                        </button>
+                        <button class="action-btn" data-action="weather">
+                            <i class="fas fa-cloud-sun"></i>
+                            Weather
+                        </button>
+                        <button class="action-btn" data-action="system-info">
+                            <i class="fas fa-desktop"></i>
+                            System Info
+                        </button>
+                        <button class="action-btn" data-action="search">
+                            <i class="fas fa-search"></i>
+                            Knowledge Search
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    <div id="recent-activity" class="activity-log">
+                        <!-- Recent activities will be populated dynamically -->
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Modal for Settings -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Settings</h3>
+                <button class="close-btn" id="close-settings">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label>Voice Recognition Sensitivity</label>
+                    <input type="range" id="voice-sensitivity" min="0" max="100" value="75">
+                </div>
+                <div class="setting-group">
+                    <label>Auto-scroll Conversation</label>
+                    <input type="checkbox" id="auto-scroll" checked>
+                </div>
+                <div class="setting-group">
+                    <label>Theme</label>
+                    <select id="theme-select">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-overlay">
+        <div class="spinner"></div>
+        <span>Connecting to SaraAI...</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/config.js"></script>
+    <script src="/js/websocket.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/voice.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

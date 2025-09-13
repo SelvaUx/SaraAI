@@ -1,0 +1,215 @@
+# SaraAI 5.0 - Inter-Module Communication Configuration
+# Defines the communication protocols between all modules
+
+# Core Orchestrator (Python)
+orchestrator:
+  host: "localhost"
+  port: 8000
+  endpoints:
+    status: "/status"
+    command: "/command"
+    health: "/health"
+  websocket:
+    enabled: true
+    port: 8080
+
+# Speech Recognition Module (C++)
+speech:
+  host: "localhost"
+  port: 8001
+  endpoints:
+    recognize: "/api/recognize"
+    stream: "/api/stream"
+    health: "/health"
+    config: "/api/config"
+  protocols:
+    - "http"
+    - "websocket"
+  audio_format:
+    sample_rate: 16000
+    channels: 1
+    format: "pcm"
+
+# Text-to-Speech Module (Java)
+tts:
+  host: "localhost"
+  port: 8002
+  endpoints:
+    synthesize: "/api/synthesize"
+    voices: "/api/voices"
+    health: "/health"
+    config: "/api/config"
+  protocols:
+    - "http"
+  audio_format:
+    format: "wav"
+    sample_rate: 22050
+
+# System Control Module (C#)
+system:
+  host: "localhost"
+  port: 8003
+  endpoints:
+    execute: "/api/system/execute"
+    files: "/api/files"
+    processes: "/api/processes"
+    health: "/health"
+    info: "/api/system/info"
+  protocols:
+    - "http"
+    - "https"
+  security:
+    require_auth: true
+    allowed_operations:
+      - "file_read"
+      - "file_write"
+      - "process_list"
+      - "system_info"
+
+# Knowledge Database Module (Rust)
+knowledge:
+  host: "localhost"
+  port: 8004
+  endpoints:
+    search: "/api/search"
+    add: "/api/knowledge"
+    update: "/api/knowledge/{id}"
+    delete: "/api/knowledge/{id}"
+    health: "/health"
+  protocols:
+    - "http"
+  database:
+    type: "sqlite"
+    path: "database/knowledge.db"
+  search:
+    engine: "tantivy"
+    index_path: "database/search_index"
+
+# Dashboard (JavaScript/Node.js)
+dashboard:
+  host: "localhost"
+  port: 3000
+  endpoints:
+    static: "/"
+    api: "/api"
+    websocket: "/socket.io"
+  protocols:
+    - "http"
+    - "websocket"
+  features:
+    real_time: true
+    voice_visualization: true
+
+# Communication Protocols
+communication:
+  # REST API Configuration
+  rest:
+    timeout: 30000  # 30 seconds
+    retry_attempts: 3
+    retry_delay: 1000  # 1 second
+    content_type: "application/json"
+    
+  # WebSocket Configuration
+  websocket:
+    heartbeat_interval: 30000  # 30 seconds
+    reconnect_attempts: 5
+    reconnect_delay: 2000  # 2 seconds
+    
+  # Message Queue (for async communication)
+  message_queue:
+    enabled: false  # Enable for production
+    type: "redis"   # redis, rabbitmq, kafka
+    host: "localhost"
+    port: 6379
+    
+  # Inter-Process Communication
+  ipc:
+    enabled: true
+    method: "named_pipes"  # named_pipes, unix_sockets, shared_memory
+    
+# API Routes and Methods
+routes:
+  # Voice Command Flow
+  voice_command:
+    - module: "speech"
+      endpoint: "/api/recognize"
+      method: "POST"
+    - module: "orchestrator"
+      endpoint: "/command"
+      method: "POST"
+    - module: "tts"
+      endpoint: "/api/synthesize"
+      method: "POST"
+      
+  # System Command Flow
+  system_command:
+    - module: "orchestrator"
+      endpoint: "/command"
+      method: "POST"
+    - module: "system"
+      endpoint: "/api/system/execute"
+      method: "POST"
+      
+  # Knowledge Query Flow
+  knowledge_query:
+    - module: "orchestrator"
+      endpoint: "/command"
+      method: "POST"
+    - module: "knowledge"
+      endpoint: "/api/search"
+      method: "GET"
+
+# Error Handling
+error_handling:
+  retry_on_failure: true
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 5
+    recovery_timeout: 60000  # 60 seconds
+  logging:
+    level: "INFO"
+    format: "json"
+    
+# Health Checks
+health_checks:
+  enabled: true
+  interval: 30000  # 30 seconds
+  endpoints:
+    - module: "orchestrator"
+      url: "http://localhost:8000/health"
+    - module: "speech"
+      url: "http://localhost:8001/health"
+    - module: "tts"
+      url: "http://localhost:8002/health"
+    - module: "system"
+      url: "http://localhost:8003/health"
+    - module: "knowledge"
+      url: "http://localhost:8004/health"
+      
+# Security Configuration
+security:
+  cors:
+    enabled: true
+    origins:
+      - "http://localhost:3000"
+      - "http://127.0.0.1:3000"
+  authentication:
+    enabled: false  # Enable for production
+    type: "jwt"
+    secret_key: "your-secret-key-here"
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+
+# Development Configuration
+development:
+  mock_responses: false
+  debug_logging: true
+  hot_reload: true
+  
+# Production Configuration  
+production:
+  ssl_enabled: true
+  load_balancing: true
+  caching: true
+  monitoring: true
