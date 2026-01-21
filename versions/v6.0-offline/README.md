@@ -53,8 +53,8 @@ A powerful desktop AI assistant built with Electron and Python, featuring voice 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/SelvaUx/sara-ai-desktop.git
-   cd sara-ai-desktop
+   git clone https://github.com/SelvaUx/SaraAI.git
+   cd SaraAI/versions/v6.0-offline
    ```
 
 2. **Install Node.js dependencies**
@@ -135,7 +135,7 @@ Once the application is running, you can use the following voice commands:
 ## 🏗️ Project Structure
 
 ```
-sara-ai-desktop/
+v6.0-offline/
 ├── renderer/              # Frontend files
 │   ├── index.html        # Main UI
 │   ├── renderer.js       # Frontend logic
@@ -145,9 +145,7 @@ sara-ai-desktop/
 ├── main.js              # Electron main process
 ├── preload.js           # Electron preload script
 ├── package.json         # Node.js dependencies
-├── requirements.txt     # Python dependencies
-├── .env                 # Environment variables
-└── dist/                # Built application files
+└── requirements.txt     # Python dependencies
 ```
 
 ## 🛠️ Technologies Used
@@ -174,20 +172,7 @@ sara-ai-desktop/
 
 ### Build Configuration
 
-The application uses `electron-builder` for packaging. Configuration can be found in `package.json` under the `build` section:
-
-```json
-{
-  "build": {
-    "appId": "com.sara.offline",
-    "productName": "SARA AI",
-    "win": {
-      "target": ["nsis", "portable"],
-      "icon": "build/icon.ico"
-    }
-  }
-}
-```
+The application uses `electron-builder` for packaging. Configuration can be found in `package.json` under the `build` section.
 
 ### Python Automation
 
@@ -233,16 +218,6 @@ python --version
 3. Implement the command logic
 4. Update the README with the new command
 
-Example:
-
-```javascript
-if (cleanText.includes("your command")) {
-  response.text = "Response text";
-  // Your logic here
-  return response;
-}
-```
-
 ### Adding Python Automation
 
 1. Open `automation.py`
@@ -253,12 +228,6 @@ if (cleanText.includes("your command")) {
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
@@ -276,26 +245,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Thanks to the Electron community for the amazing framework
 - PyAutoGUI for powerful automation capabilities
 - Wikipedia API for knowledge integration
-
-## 📊 Version History
-
-- **6.0.0** (Current)
-  - Offline voice command system
-  - WhatsApp integration
-  - Wikipedia integration
-  - Enhanced UI/UX
-  - Improved automation scripts
-
-## 🔮 Future Enhancements
-
-- [ ] Multi-language support
-- [ ] AI/ML integration for smarter responses
-- [ ] Calendar and reminder system
-- [ ] Email integration
-- [ ] Custom command creation
-- [ ] Plugin system
-- [ ] Cloud sync for settings
-- [ ] Mobile companion app
 
 ---
 

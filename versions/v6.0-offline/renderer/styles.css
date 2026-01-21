@@ -1,0 +1,51 @@
+body {
+    margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0f; color: white; overflow: hidden; user-select: none;
+    border: 1px solid rgba(0, 247, 255, 0.5); box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
+    border-radius: 10px; height: 100vh;
+}
+.title-bar {
+    height: 32px; background: linear-gradient(90deg, rgba(0, 15, 30, 0.95) 0%, rgba(0, 10, 20, 0.9) 100%);
+    display: flex; justify-content: space-between; align-items: center;
+    -webkit-app-region: drag; padding: 0 12px; border-bottom: 1px solid rgba(0, 247, 255, 0.3);
+}
+.app-name { font-size: 13px; color: #00f7ff; font-weight: 700; letter-spacing: 1.5px; }
+.window-controls button { -webkit-app-region: no-drag; background: none; border: none; color: rgba(0, 247, 255, 0.7); cursor: pointer; }
+.container {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    height: calc(100% - 32px); background: radial-gradient(circle at center, rgba(20, 20, 35, 0.9) 0%, rgba(5, 5, 10, 1) 100%);
+    position: relative;
+}
+.core-wrapper { position: relative; width: 160px; height: 160px; margin-bottom: 25px; }
+.arc-reactor { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; }
+.circle-outer { position: absolute; width: 150px; height: 150px; border: 2px dashed rgba(0, 247, 255, 0.7); border-radius: 50%; animation: spin 12s linear infinite; }
+.circle-inner { position: absolute; width: 110px; height: 110px; border: 4px solid rgba(0, 247, 255, 0.4); border-radius: 50%; }
+.core-light { width: 90px; height: 90px; background: rgba(200, 255, 255, 0.9); border-radius: 50%; box-shadow: 0 0 20px #00f7ff; transition: 0.3s; }
+.pulsing { animation: pulse 1.2s infinite ease-in-out alternate; }
+.status-text { font-size: 16px; letter-spacing: 4px; color: #00f7ff; margin-bottom: 8px; font-weight: 600; }
+.transcript-box { width: 85%; min-height: 45px; text-align: center; font-size: 14px; color: rgba(255, 255, 255, 0.8); margin-bottom: 25px; font-style: italic; }
+.controls { display: flex; gap: 15px; margin-bottom: 10px; }
+.controls button {
+    background: rgba(0, 247, 255, 0.05); border: 1px solid rgba(0, 247, 255, 0.8);
+    color: #00f7ff; width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+    font-size: 20px; transition: 0.3s; display: flex; align-items: center; justify-content: center;
+}
+.controls button:hover, .controls button.active {
+    background: rgba(0, 247, 255, 0.2); box-shadow: 0 0 20px rgba(0, 247, 255, 0.5); color: #fff;
+}
+.input-area { display: flex; width: 80%; gap: 10px; margin-top: 10px; }
+#command-input {
+    flex: 1; background: rgba(0,0,0,0.5); border: 1px solid #00f7ff;
+    color: white; padding: 8px 12px; border-radius: 20px; outline: none; font-family: 'Segoe UI', sans-serif;
+}
+#send-btn {
+    background: transparent; border: 1px solid #00f7ff; color: #00f7ff;
+    width: 35px; height: 35px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.footer-credit {
+    position: absolute; bottom: 4px; width: 100%; text-align: center;
+    font-size: 9px; color: rgba(0, 247, 255, 0.3); letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 300; pointer-events: none;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes pulse { 0% { opacity: 0.85; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1.04); } }

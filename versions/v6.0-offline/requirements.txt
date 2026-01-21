@@ -1,0 +1,10 @@
+# SARA AI Desktop - Python Dependencies
+
+# Desktop Automation
+pyautogui>=0.9.54
+
+# Screenshot and Image Handling
+Pillow>=10.0.0
+
+# Additional utilities (if needed in future)
+# python-dotenv>=1.0.0

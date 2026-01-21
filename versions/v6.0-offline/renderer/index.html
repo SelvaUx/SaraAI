@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARA AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="title-bar">
+        <div class="app-name">SARA AI 6.0 [OFFLINE]</div>
+        <div class="window-controls">
+            <button id="min-btn"><i class="fas fa-minus"></i></button>
+            <button id="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Arc Reactor -->
+        <div class="core-wrapper">
+            <div class="arc-reactor">
+                <div class="circle-outer"></div>
+                <div class="circle-inner"></div>
+                <div class="core-light" id="core-status"></div>
+            </div>
+        </div>
+
+        <div class="status-text" id="status">STANDBY</div>
+        
+        <div class="transcript-box">
+            <p id="user-transcript">Say "Hey Sara" or Type...</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="text-mode-btn" title="Type Command"><i class="fas fa-keyboard"></i></button>
+            <button id="mic-btn" class="active" title="Voice Mode"><i class="fas fa-microphone"></i></button>
+        </div>
+
+        <!-- Input Area (Hidden by default) -->
+        <div class="input-area" id="input-area" style="display: none;">
+            <input type="text" id="command-input" placeholder="Type: open chrome, search ai...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+        <div class="footer-credit">Selva.Ux</div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
