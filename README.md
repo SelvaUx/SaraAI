@@ -1,304 +1,557 @@
-# SARA AI 6.0 [OFFLINE] 🤖
+# SARA AI - Your Intelligent Desktop Assistant 🤖
 
-![Version](https://img.shields.io/badge/version-6.0.0-blue.svg)
+![Latest Version](https://img.shields.io/badge/latest-v6.0--offline-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
+![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
+![Node](https://img.shields.io/badge/node-14+-green.svg)
 
-A powerful desktop AI assistant built with Electron and Python, featuring voice commands, desktop automation, and intelligent task handling.
+**SARA AI** is an evolving desktop AI assistant that has grown from basic voice commands to a sophisticated automation system. This repository contains the complete evolution of SARA across multiple versions, each building upon the previous with enhanced features and capabilities.
 
-## 🌟 Features
+---
 
-### Voice Commands
+## 📚 Table of Contents
 
-- **Wake Word Detection**: Activate with "Hey Sara" or "Sara"
-- **Natural Language Processing**: Understands conversational commands
-- **Multi-function Support**: Open apps, search web, control system, and more
+- [Version Overview](#-version-overview)
+- [Quick Start](#-quick-start)
+- [Version Details](#-version-details)
+- [Feature Comparison](#-feature-comparison)
+- [Technologies](#-technologies)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
 
-### Application Control
+---
 
-- Open applications via Windows Search
-- Smart application launching with typing simulation
-- Window management (minimize, close)
+## 🎯 Version Overview
 
-### Web Integration
+| Version                                 | Status    | Description                     | Key Features                                            |
+| --------------------------------------- | --------- | ------------------------------- | ------------------------------------------------------- |
+| [**v6.0-offline**](#v60-offline-latest) | ✅ Latest | Fully offline desktop assistant | Voice commands, Desktop automation, WhatsApp, Wikipedia |
+| [**v5.0**](#v50)                        | 📦 Stable | Advanced TTS & multi-language   | Text-to-Speech, Java integration, Enhanced UI           |
+| [**v4.0**](#v40)                        | 📦 Stable | Android mobile version          | Mobile app, Touch interface, On-device processing       |
+| [**v3.0**](#v30)                        | 📦 Stable | Web-based interface             | Browser-based, REST API, Cloud ready                    |
+| [**v2.0-enhanced**](#v20-enhanced)      | 📦 Stable | Improved v2.0                   | Better UI, More commands, Bug fixes                     |
+| [**v2.0**](#v20)                        | 📦 Stable | GUI introduction                | Graphical interface, Settings panel                     |
+| [**v1-basic**](#v1-basic)               | 📦 Legacy | Command-line only               | Basic voice recognition, CLI                            |
 
-- Google search directly from voice commands
-- Open websites by URL or name
-- Quick access to YouTube, Google, and other popular sites
-- Wikipedia integration with article summaries
+---
 
-### Desktop Automation
+## 🚀 Quick Start
 
-- **Screenshots**: Capture and save screenshots to Pictures folder
-- **WhatsApp Messaging**: Send messages via WhatsApp desktop app
-- **System Control**: Time, date, and system information
-
-### Utilities
-
-- Built-in joke library for entertainment
-- Real-time clock and calendar
-- Wikipedia API integration for quick information
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js** (v14 or higher)
-- **Python** (v3.7 or higher)
-- **Windows OS** (Required for automation features)
-- **npm** or **yarn** package manager
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/SelvaUx/sara-ai-desktop.git
-   cd sara-ai-desktop
-   ```
-
-2. **Install Node.js dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Install Python dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure environment variables** (Optional)
-   Create a `.env` file in the root directory:
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-### Running the Application
-
-#### Development Mode
+### Choose Your Version
 
 ```bash
+# Clone the repository
+git clone https://github.com/SelvaUx/SaraAI.git
+cd SaraAI
+
+# Navigate to the version you want
+cd versions/v6.0-offline  # or any other version
+
+# Install dependencies
+npm install
+pip install -r requirements.txt  # if Python is used
+
+# Run the application
 npm start
 ```
 
-#### Build for Production
+---
 
-```bash
-# Build for Windows (all architectures)
-npm run dist
+## 📖 Version Details
 
-# Build for Windows x64 only
-npm run dist:win:x64
+### v6.0-offline (Latest)
+
+> 🎯 **Focus:** Fully offline desktop assistant with voice commands and automation
+
+**Location:** `/versions/v6.0-offline/`
+
+#### Features
+
+- ✅ **Offline Voice Recognition** - Works without internet
+- ✅ **Desktop Automation** - Screenshot capture, app launching
+- ✅ **WhatsApp Integration** - Send messages via desktop app
+- ✅ **Wikipedia Lookup** - Quick information retrieval
+- ✅ **Smart Web Search** - Google search integration
+- ✅ **Application Control** - Open any Windows app
+- ✅ **System Utilities** - Time, date, jokes
+
+#### Tech Stack
+
+- **Frontend:** Electron, HTML/CSS/JavaScript
+- **Backend:** Node.js, Python
+- **Automation:** PyAutoGUI
+- **APIs:** Wikipedia API, Web Speech API
+
+#### Quick Commands
+
+```
+"Hey Sara"                           - Wake up
+"Open Chrome"                        - Launch apps
+"Screenshot"                         - Capture screen
+"Send hello to John in WhatsApp"     - Message
+"Wikipedia Albert Einstein"          - Get info
+"Search Python tutorials"            - Web search
 ```
 
-The built application will be available in the `dist` folder.
+#### Installation
 
-## 📖 Usage
+```bash
+cd versions/v6.0-offline
+npm install
+pip install -r requirements.txt
+npm start
+```
 
-### Voice Commands
+---
 
-Once the application is running, you can use the following voice commands:
+### v5.0
+
+> 🎯 **Focus:** Advanced Text-to-Speech and multi-language support
+
+**Location:** `/versions/v5.0/`
+
+#### Features
+
+- ✅ **Advanced TTS Engine** - Multiple voice options
+- ✅ **Multi-language Support** - Supports multiple languages
+- ✅ **Java TTS Integration** - Native Java TTS service
+- ✅ **Enhanced UI** - Modern interface design
+- ✅ **Voice Customization** - Pitch, speed, volume control
+- ✅ **Audio Export** - Save responses as audio files
+
+#### Tech Stack
+
+- **Frontend:** Electron, React components
+- **Backend:** Node.js, Java
+- **TTS:** Java Sound API, FreeTTS
+- **Build:** Gradle, Maven
+
+#### Notable Additions
+
+- Java-based TTS service for better voice quality
+- Voice profile customization
+- Audio file generation
+- Improved response accuracy
+
+---
+
+### v4.0
+
+> 🎯 **Focus:** Mobile Android application
+
+**Location:** `/versions/v4.0/`
+
+#### Features
+
+- ✅ **Android Native App** - Full mobile experience
+- ✅ **Touch Interface** - Tap and swipe controls
+- ✅ **On-device Processing** - No cloud dependency
+- ✅ **Mobile Optimized UI** - Responsive design
+- ✅ **Background Service** - Always listening mode
+- ✅ **Widget Support** - Quick access widget
+
+#### Tech Stack
+
+- **Platform:** Android (Java/Kotlin)
+- **UI:** Material Design
+- **Speech:** Android Speech Recognition
+- **Storage:** SQLite
+
+#### Mobile-Specific Features
+
+- Voice activation without opening app
+- Lock screen widget
+- Battery optimization
+- Offline mode
+
+---
+
+### v3.0
+
+> 🎯 **Focus:** Web-based interface with REST API
+
+**Location:** `/versions/v3.0/`
+
+#### Features
+
+- ✅ **Web Interface** - Browser-based access
+- ✅ **REST API** - External integrations
+- ✅ **Multi-user Support** - User accounts
+- ✅ **Cloud Ready** - Deployable to cloud
+- ✅ **Session Management** - Persistent conversations
+- ✅ **Analytics Dashboard** - Usage statistics
+
+#### Tech Stack
+
+- **Frontend:** React, Bootstrap
+- **Backend:** Express.js, MongoDB
+- **API:** RESTful endpoints
+- **Auth:** JWT tokens
+
+#### API Endpoints
+
+```
+POST /api/command     - Send voice command
+GET  /api/history     - Get command history
+POST /api/settings    - Update preferences
+GET  /api/stats       - Usage statistics
+```
+
+---
+
+### v2.0-enhanced
+
+> 🎯 **Focus:** Improved GUI and enhanced features from v2.0
+
+**Location:** `/versions/v2.0-enhanced/`
+
+#### Features
+
+- ✅ **Polished GUI** - Refined visual design
+- ✅ **More Commands** - Expanded command library
+- ✅ **Settings Panel** - Customization options
+- ✅ **Theme Support** - Light/Dark themes
+- ✅ **Command History** - View past interactions
+- ✅ **Bug Fixes** - Stability improvements
+
+#### Improvements Over v2.0
+
+- Better error handling
+- Faster response times
+- More intuitive UI
+- Additional voice commands
+- Enhanced logging
+
+---
+
+### v2.0
+
+> 🎯 **Focus:** Introduction of graphical user interface
+
+**Location:** `/versions/v2.0/`
+
+#### Features
+
+- ✅ **First GUI Version** - Visual interface
+- ✅ **Settings Page** - Basic configuration
+- ✅ **Visual Feedback** - Command status display
+- ✅ **Tray Icon** - System tray integration
+- ✅ **Window Management** - Minimize, maximize, close
+
+#### Tech Stack
+
+- **Frontend:** Electron, Vanilla JavaScript
+- **Backend:** Node.js
+- **UI:** Custom CSS
+
+---
+
+### v1-basic
+
+> 🎯 **Focus:** Command-line voice assistant foundation
+
+**Location:** `/versions/v1-basic/`
+
+#### Features
+
+- ✅ **Voice Recognition** - Basic speech-to-text
+- ✅ **CLI Interface** - Terminal-based
+- ✅ **Simple Commands** - Core functionality
+- ✅ **Text Responses** - Console output
+
+#### Tech Stack
+
+- **Runtime:** Node.js
+- **Speech:** Node speech recognition libraries
+- **Interface:** Command-line
 
 #### Basic Commands
 
-- `"Hey Sara"` or `"Sara"` - Wake up the assistant
-- `"Minimize"` or `"Minimize yourself"` - Minimize the window
-- `"Close"` or `"Go to sleep"` - Close the application
-
-#### Web & Search
-
-- `"Search [query]"` - Search Google for the query
-- `"Open YouTube"` - Open YouTube
-- `"Open Google"` - Open Google
-- `"Open [website].com"` - Open any website
-- `"Wikipedia [topic]"` - Get Wikipedia summary or open article
-
-#### Applications
-
-- `"Open [app name]"` - Open any Windows application
-  - Examples: "Open Chrome", "Open Notepad", "Open Telegram"
-
-#### Utilities
-
-- `"What's the time?"` - Get current time
-- `"What's the date?"` - Get current date
-- `"Tell me a joke"` - Hear a random joke
-- `"Screenshot"` - Take a screenshot (saved to Pictures folder)
-
-#### Messaging
-
-- `"Send [message] to [contact] in WhatsApp"` - Send WhatsApp message
-  - Example: "Send hello to John in WhatsApp"
-
-## 🏗️ Project Structure
-
 ```
-sara-ai-desktop/
-├── renderer/              # Frontend files
-│   ├── index.html        # Main UI
-│   ├── renderer.js       # Frontend logic
-│   └── styles.css        # Styling
-├── automation.py         # Python automation scripts
-├── command-handler.js    # Voice command processing
-├── main.js              # Electron main process
-├── preload.js           # Electron preload script
-├── package.json         # Node.js dependencies
-├── requirements.txt     # Python dependencies
-├── .env                 # Environment variables
-└── dist/                # Built application files
+"hello sara"    - Greeting
+"time"          - Current time
+"date"          - Current date
+"exit"          - Close application
 ```
 
-## 🛠️ Technologies Used
+---
 
-### Frontend
+## 📊 Feature Comparison
 
-- **Electron** - Desktop application framework
-- **HTML/CSS/JavaScript** - User interface
-- **Web Speech API** - Voice recognition
+| Feature            | v1  | v2.0 | v2.0-E | v3.0 | v4.0 | v5.0 | v6.0 |
+| ------------------ | --- | ---- | ------ | ---- | ---- | ---- | ---- |
+| Voice Recognition  | ✅  | ✅   | ✅     | ✅   | ✅   | ✅   | ✅   |
+| GUI Interface      | ❌  | ✅   | ✅     | ✅   | ✅   | ✅   | ✅   |
+| Desktop Automation | ❌  | ❌   | ❌     | ❌   | ❌   | ❌   | ✅   |
+| Web Interface      | ❌  | ❌   | ❌     | ✅   | ❌   | ❌   | ❌   |
+| Mobile App         | ❌  | ❌   | ❌     | ❌   | ✅   | ❌   | ❌   |
+| TTS Engine         | ❌  | ❌   | ❌     | ❌   | ✅   | ✅   | ✅   |
+| Multi-language     | ❌  | ❌   | ❌     | ❌   | ❌   | ✅   | ❌   |
+| Offline Mode       | ✅  | ✅   | ✅     | ❌   | ✅   | ✅   | ✅   |
+| WhatsApp           | ❌  | ❌   | ❌     | ❌   | ❌   | ❌   | ✅   |
+| Wikipedia          | ❌  | ❌   | ❌     | ✅   | ✅   | ✅   | ✅   |
+| Screenshot         | ❌  | ❌   | ❌     | ❌   | ✅   | ❌   | ✅   |
+| REST API           | ❌  | ❌   | ❌     | ✅   | ❌   | ❌   | ❌   |
 
-### Backend
+---
 
-- **Node.js** - Runtime environment
-- **Python** - Automation scripts
-- **PyAutoGUI** - Desktop automation
-- **node-fetch** - HTTP requests
+## 🛠️ Technologies
 
-### APIs & Services
+### Core Technologies Across Versions
 
-- **Wikipedia API** - Information retrieval
-- **Google Search** - Web search integration
+#### Frontend
 
-## 🔧 Configuration
+- **Electron** - Desktop app framework (v2.0+)
+- **React** - UI components (v3.0, v5.0)
+- **HTML/CSS/JavaScript** - Core web technologies
+- **Material Design** - Android UI (v4.0)
 
-### Build Configuration
+#### Backend
 
-The application uses `electron-builder` for packaging. Configuration can be found in `package.json` under the `build` section:
+- **Node.js** - JavaScript runtime
+- **Python** - Automation scripts (v6.0)
+- **Java** - TTS services (v5.0)
+- **Express.js** - Web server (v3.0)
 
-```json
-{
-  "build": {
-    "appId": "com.sara.offline",
-    "productName": "SARA AI",
-    "win": {
-      "target": ["nsis", "portable"],
-      "icon": "build/icon.ico"
-    }
-  }
-}
-```
+#### Speech & Audio
 
-### Python Automation
+- **Web Speech API** - Browser speech recognition
+- **PyAutoGUI** - Desktop automation (v6.0)
+- **FreeTTS** - Java TTS (v5.0)
+- **Android Speech** - Mobile recognition (v4.0)
 
-The `automation.py` script provides three main functions:
+#### External APIs
 
-- `open_application(app_name)` - Opens Windows applications
-- `screenshot()` - Takes and saves screenshots
-- `send_whatsapp_message(contact, message)` - Sends WhatsApp messages
+- **Wikipedia API** - Knowledge retrieval
+- **Google Search** - Web search
+- **Gemini API** - AI capabilities (optional)
 
-## 🐛 Troubleshooting
+---
 
-### Python not found
+## 📦 Installation Guide
 
-Ensure Python is installed and added to your system PATH. You can test this by running:
+### General Prerequisites
 
 ```bash
+# Node.js (v14 or higher)
+node --version
+
+# Python 3.7+ (for v6.0-offline)
 python --version
+
+# Git
+git --version
 ```
 
-### Voice recognition not working
+### Version-Specific Setup
 
-- Check microphone permissions in Windows settings
-- Ensure you're using a supported browser engine (Chromium/Chrome)
-- Test microphone with other applications
+#### For Desktop Versions (v2.0, v2.0-enhanced, v5.0, v6.0-offline)
 
-### Application won't open apps
+```bash
+cd versions/[version-name]
+npm install
+npm start
+```
 
-- Ensure the application name is correct
-- Check Windows Search is functioning properly
-- Run the application with administrator privileges if needed
+#### For v6.0-offline (with Python)
 
-### Screenshot fails
+```bash
+cd versions/v6.0-offline
+npm install
+pip install -r requirements.txt
+npm start
+```
 
-- Verify the Pictures folder exists in your user directory
-- Check write permissions for the Pictures folder
+#### For Web Version (v3.0)
 
-## 📝 Development
+```bash
+cd versions/v3.0
+npm install
+npm run build
+npm run serve
+```
 
-### Adding New Commands
+#### For Android (v4.0)
 
-1. Open `command-handler.js`
-2. Add your command pattern in the `processCommand` method
-3. Implement the command logic
-4. Update the README with the new command
+```bash
+cd versions/v4.0
+./gradlew build
+./gradlew installDebug
+```
 
-Example:
+---
+
+## 🎨 Customization
+
+### Adding Custom Commands
+
+Each version has its own command handler. Example for v6.0-offline:
 
 ```javascript
-if (cleanText.includes("your command")) {
-  response.text = "Response text";
-  // Your logic here
+// In command-handler.js
+if (cleanText.includes("your custom command")) {
+  response.text = "Your response";
+  // Your custom logic here
   return response;
 }
 ```
 
-### Adding Python Automation
+### Changing Voice Settings
 
-1. Open `automation.py`
-2. Create a new function for your automation
-3. Add command-line argument handling in the `if __name__ == "__main__"` block
-4. Call it from `command-handler.js` using `runPythonAutomation()`
+Modify the voice configuration in the respective version's settings file.
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### Voice Recognition Not Working
+
+- Check microphone permissions
+- Verify browser/system supports Web Speech API
+- Test microphone with other apps
+
+#### Application Won't Start
+
+- Ensure all dependencies are installed
+- Check Node.js version compatibility
+- Review error logs in console
+
+#### Python Scripts Failing (v6.0)
+
+- Verify Python is in system PATH
+- Install required packages: `pip install -r requirements.txt`
+- Check PyAutoGUI compatibility with your OS
+
+### Getting Help
+
+- Check version-specific README in each folder
+- Open an issue on GitHub
+- Contact: [@SelvaUx](https://github.com/SelvaUx)
+
+---
+
+## 🔮 Future Roadmap
+
+### Planned Features
+
+- [ ] Cross-platform support (macOS, Linux)
+- [ ] Cloud synchronization
+- [ ] Plugin system for extensions
+- [ ] Smart home integration
+- [ ] Calendar and reminders
+- [ ] Email management
+- [ ] Custom wake words
+- [ ] Machine learning improvements
+- [ ] Multi-user profiles
+- [ ] Voice biometrics
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions! Here's how you can help:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push to the branch**
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Open a Pull Request**
+
+### Contribution Guidelines
+
+- Follow existing code style
+- Add tests for new features
+- Update documentation
+- Keep commits atomic and descriptive
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+### What This Means
+
+- ✅ Commercial use allowed
+- ✅ Modification allowed
+- ✅ Distribution allowed
+- ✅ Private use allowed
+- ⚠️ No warranty provided
+
+---
 
 ## 👤 Author
 
 **Selva.Ux**
 
-- GitHub: [@SelvaUx](https://github.com/SelvaUx)
-- Instagram: [@selva.ux](https://instagram.com/selva.ux)
+[![GitHub](https://img.shields.io/badge/GitHub-SelvaUx-181717?style=for-the-badge&logo=github)](https://github.com/SelvaUx)
+[![Instagram](https://img.shields.io/badge/Instagram-selva.ux-E4405F?style=for-the-badge&logo=instagram)](https://instagram.com/selva.ux)
+
+### Connect With Me
+
+- 💼 GitHub: [@SelvaUx](https://github.com/SelvaUx)
+- 📸 Instagram: [@selva.ux](https://instagram.com/selva.ux)
+- 📧 Email: spt6421@gmail.com
+
+---
 
 ## 🙏 Acknowledgments
 
-- Thanks to the Electron community for the amazing framework
-- PyAutoGUI for powerful automation capabilities
-- Wikipedia API for knowledge integration
+Special thanks to:
 
-## 📊 Version History
+- **Electron Team** - For the amazing desktop framework
+- **Python Community** - For PyAutoGUI and automation tools
+- **Node.js Contributors** - For the robust runtime
+- **Wikipedia** - For the free knowledge API
+- **Open Source Community** - For continuous inspiration
+- **All Contributors** - Who have helped improve SARA AI
 
-- **6.0.0** (Current)
-  - Offline voice command system
-  - WhatsApp integration
-  - Wikipedia integration
-  - Enhanced UI/UX
-  - Improved automation scripts
+---
 
-## 🔮 Future Enhancements
+## ⭐ Star History
 
-- [ ] Multi-language support
-- [ ] AI/ML integration for smarter responses
-- [ ] Calendar and reminder system
-- [ ] Email integration
-- [ ] Custom command creation
-- [ ] Plugin system
-- [ ] Cloud sync for settings
-- [ ] Mobile companion app
+If you find this project helpful, please consider giving it a star! ⭐
+
+---
+
+## 📞 Support
+
+Need help? Here's how to get support:
+
+1. **Documentation** - Check version-specific READMEs
+2. **Issues** - [Open an issue](https://github.com/SelvaUx/SaraAI/issues)
+3. **Discussions** - Join GitHub Discussions
+4. **Email** - Contact the author directly
+
+---
+
+## 📈 Project Stats
+
+![GitHub stars](https://img.shields.io/github/stars/SelvaUx/SaraAI?style=social)
+![GitHub forks](https://img.shields.io/github/forks/SelvaUx/SaraAI?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/SelvaUx/SaraAI?style=social)
 
 ---
 
 <div align="center">
-  Made with ❤️ by Selva.Ux
+
+### Made with ❤️ by Selva.Ux
+
+**SARA AI** - _"Just a rather very intelligent system."_
+
+[⬆ Back to Top](#sara-ai---your-intelligent-desktop-assistant-)
+
 </div>
