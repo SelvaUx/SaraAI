@@ -1,0 +1,33 @@
+{
+  "app_name": "Sara AI Max",
+  "version": "1.0.0-mvp",
+  "description": "Voice-controlled desktop automation assistant",
+  
+  "voice": {
+    "wake_word": "hey sara",
+    "language": "en-US",
+    "tts_rate": 160,
+    "tts_volume": 1.0
+  },
+  
+  "security": {
+    "audit_log_path": "sara_audit.json",
+    "require_confirmation_for_high_risk": true,
+    "trusted_mode": false
+  },
+  
+  "context": {
+    "max_history": 50
+  },
+  
+  "automation": {
+    "default_folder_location": "~/Desktop",
+    "default_file_location": "~/Desktop",
+    "search_depth_limit": 3
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "file": "sara_max.log"
+  }
+}

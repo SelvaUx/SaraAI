@@ -1,0 +1,76 @@
+# Sara AI Max - Git Ignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+sara_max.log
+
+# Security & Credentials
+.env
+*.key
+*.pem
+credentials.json
+sara_audit.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Plugin installed directory
+plugins/installed/
+
+# Test outputs
+test_output/
+screenshots/
+
+# Sara Screenshots
+Sara_Screenshots/
+
+# Model files (if using local AI)
+*.bin
+models/
+
+# Cache
+.cache/
+*.cache

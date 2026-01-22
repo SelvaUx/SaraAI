@@ -1,0 +1,61 @@
+# Sara AI Max - Complete Dependencies
+
+# ============================================================================
+# CORE DEPENDENCIES (Required for MVP)
+# ============================================================================
+
+# Data validation & models
+pydantic>=2.0.0
+
+# Secure credential storage
+keyring>=24.0.0
+
+# System information & process management
+psutil>=5.9.0
+
+# GUI Automation - Step by Step
+pyautogui>=0.9.54
+
+# Voice recognition & synthesis (MVP)
+pyttsx3>=2.90
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13
+
+# ============================================================================
+# OPTIONAL DEPENDENCIES (Advanced Features)
+# ============================================================================
+
+# Browser automation
+# playwright>=1.40.0  # Uncomment for browser control
+
+# Vision & OCR
+# pillow>=10.0.0      # Image processing
+# pytesseract>=0.3.10 # Tesseract OCR
+# easyocr>=1.7.0      # EasyOCR alternative
+# opencv-python>=4.8.0  # Computer vision for UI finding
+
+# Office automation
+# python-docx>=1.0.0   # Word documents
+# openpyxl>=3.1.0      # Excel spreadsheets
+# python-pptx>=0.6.22  # PowerPoint presentations
+
+# Messaging
+# telethon>=1.30.0     # Telegram integration
+# selenium>=4.15.0     # WhatsApp Web automation
+
+# Email
+# exchangelib>=5.0.0   # Outlook integration
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Web GUI
+flask>=3.0.0
+
+# Additional utilities
+numpy>=1.24.0         # For vision processing if using OpenCV
