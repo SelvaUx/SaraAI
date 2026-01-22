@@ -1,153 +1,190 @@
-# **SaraAI 2.0** 🤖
+# 🤖 Sara AI v2.0 - Enhanced Voice Assistant
 
-**SaraAI 2.0** is an advanced intelligent virtual assistant built with Python that provides a **Jarvis-like** experience. It combines voice recognition, text-to-speech, and automation capabilities to help you control your computer, search for information, and perform various tasks through natural voice commands.
+**Wake Word Detection** - Continuous voice recognition with "Hey Sara" activation
 
----
+Sara AI v2.0 introduces true voice interaction with wake word detection, making it a hands-free voice assistant that's always listening for your commands.
 
-## 🚀 **What's New in SaraAI 2.0**
-
-- **Enhanced Voice Recognition**: Improved wake word detection with "Hey Sara"
-- **Robust Error Handling**: Better microphone and PyAudio error management
-- **Professional TTS Engine**: Dynamic voice selection with Jarvis-like speech patterns
-- **Modular Architecture**: Clean, organized codebase with separate modules for different functionalities
-- **Windows Integration**: Seamless integration with Windows Search and system applications
-- **Smart Music Player**: Intelligent music folder detection and playback
-- **Advanced Screenshot Functionality**: Automatic screenshot saving to Pictures folder
+![Version](https://img.shields.io/badge/version-2.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.7%2B-green.svg)
+![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
+![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
 ---
 
-## ✨ **Core Features**
+## 🚀 What's New in v2.0
 
-### 🎤 **Voice Recognition & Control**
-- **Wake Word Activation**: Say "Hey Sara" to activate the assistant
-- **Continuous Listening**: Always ready to respond to your commands
-- **Google Speech Recognition**: Accurate voice-to-text conversion
-- **Ambient Noise Adjustment**: Automatically adjusts for background noise
+### 🎤 **Voice Recognition Breakthrough**
+
+- **Wake Word Detection**: Activate with "Hey Sara"
+- **Continuous Listening**: Always ready to respond
+- **Google Speech Recognition**: Accurate voice-to-text
+- **Ambient Noise Adjustment**: Auto-adjusts for background noise
+
+### 🎵 **Music Player**
+
+- Play music from your Music folder
+- Automatic music file detection
+- Default player integration
+
+### 🔧 **Enhanced Architecture**
+
+- **Modular Design**: Clean, organized codebase
+- **Robust Error Handling**: Better microphone and PyAudio management
+- **Professional TTS**: Dynamic voice selection with Jarvis-like patterns
+- **Improved Windows Integration**: Seamless Start Menu integration
+
+---
+
+## ✨ Core Features
 
 ### 🗣️ **Text-to-Speech (TTS)**
-- **Professional Voice**: Jarvis-like speaking experience
-- **Dynamic Voice Selection**: Automatically selects the best available voice
-- **Customizable Speech Rate**: Optimized for clarity and understanding
-- **Real-time Feedback**: Immediate audio responses to all commands
 
-### 🌐 **Web & Search Integration**
-- **Google Search**: Direct web searches through voice commands
-- **Wikipedia Integration**: Instant Wikipedia summaries with 2-sentence results
-- **Browser Control**: Opens websites and search results in default browser
-- **Smart Query Processing**: Intelligent extraction of search terms
+- Professional Jarvis-like voice
+- Automatic voice selection (female voice preferred)
+- Customizable speech rate (160 WPM default)
+- Real-time audio feedback
 
-### 💻 **System Control & Automation**
-- **Application Launcher**: Open any Windows application via voice
-- **Screenshot Capture**: Take and save screenshots instantly
-- **Windows Search Integration**: Leverages Windows built-in search functionality
-- **System Information**: Get current time and date on demand
+### 🌐 **Web & Search**
 
-### 🎵 **Entertainment Features**
-- **Music Player**: Play music from your Music folder
-- **Joke Generator**: Random programming and general jokes
-- **Smart File Detection**: Automatically finds and plays available music files
+- Google Search integration
+- Wikipedia 2-sentence summaries
+- Browser control & automation
+- Smart query processing
 
-## 📋 **Complete Command Reference**
+### 💻 **System Control**
+
+- Application launcher (any Windows app)
+- Screenshot capture with auto-save
+- Windows Search integration
+- System information (time, date)
+
+### 🎵 **Entertainment**
+
+- Music playback from Music folder
+- Random programming jokes
+- Smart file detection
+
+---
+
+## 📋 Complete Command Reference
 
 ### 🔍 **Search Commands**
-| Command | Example | Description |
-|---------|---------|-------------|
-| `search [query]` | "search artificial intelligence" | Searches Google for the specified query |
-| `search [topic]` | "search Python programming" | Opens Google search results in default browser |
+
+| Command          | Example                          | Description              |
+| ---------------- | -------------------------------- | ------------------------ |
+| `search [query]` | `search artificial intelligence` | Searches Google          |
+| `search [topic]` | `search Python programming`      | Opens results in browser |
 
 ### 🚀 **Application Commands**
-| Command | Example | Description |
-|---------|---------|-------------|
-| `open [app]` | "open notepad" | Opens the specified application |
-| `open [app]` | "open chrome" | Launches Chrome browser |
-| `open [app]` | "open telegram" | Opens Telegram application |
-| `open [app]` | "open calculator" | Opens Windows Calculator |
+
+| Command      | Example           | Description       |
+| ------------ | ----------------- | ----------------- |
+| `open [app]` | `open notepad`    | Opens application |
+| `open [app]` | `open chrome`     | Launches Chrome   |
+| `open [app]` | `open telegram`   | Opens Telegram    |
+| `open [app]` | `open calculator` | Opens Calculator  |
 
 ### 📚 **Information Commands**
-| Command | Example | Description |
-|---------|---------|-------------|
-| `wikipedia [topic]` | "wikipedia machine learning" | Searches Wikipedia and reads summary |
-| `wikipedia [person]` | "wikipedia Albert Einstein" | Gets biographical information |
-| `time` | "time" | Tells current time in 12-hour format |
-| `date` | "date" | Tells current date (DD/MM/YYYY format) |
+
+| Command              | Example                      | Description             |
+| -------------------- | ---------------------------- | ----------------------- |
+| `wikipedia [topic]`  | `wikipedia machine learning` | Reads Wikipedia summary |
+| `wikipedia [person]` | `wikipedia Albert Einstein`  | Gets biography          |
+| `time`               | `time`                       | Tells current time      |
+| `date`               | `date`                       | Tells current date      |
 
 ### 📸 **Utility Commands**
-| Command | Example | Description |
-|---------|---------|-------------|
-| `screenshot` | "screenshot" | Takes screenshot and saves to Pictures folder |
-| `play music` | "play music" | Plays music from your Music folder |
-| `joke` | "joke" | Tells a random programming or general joke |
 
-## 🛠️ **Installation Guide**
+| Command      | Example      | Description                   |
+| ------------ | ------------ | ----------------------------- |
+| `screenshot` | `screenshot` | Saves to Pictures folder      |
+| `play music` | `play music` | Plays music from Music folder |
+| `joke`       | `joke`       | Tells random joke             |
 
-### **Prerequisites**
-- **Python 3.7+** installed on your system
-- **Windows 10/11** (optimized for Windows)
+---
+
+## 🛠️ Installation
+
+### Prerequisites
+
+- **Python 3.7+**
+- **Windows 10/11**
 - **Microphone** for voice input
 - **Speakers/Headphones** for audio output
-- **Internet connection** for Google Speech Recognition and Wikipedia
+- **Internet Connection** for Google Speech Recognition
 
-### **Step 1: Clone the Repository**
-```bash
-git clone https://github.com/SelvaUx/SaraAI2.0.git
-cd SaraAI2.0
-```
+### Setup Steps
 
-### **Step 2: Create Virtual Environment (Recommended)**
-```bash
-python -m venv .venv
-.venv\Scripts\activate  # On Windows
-```
+1. **Clone Repository**
 
-### **Step 3: Install Dependencies**
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   git clone https://github.com/SelvaUx/SaraAI.git
+   cd SaraAI/versions/v2.0
+   ```
 
-**Required Dependencies:**
-- `pyttsx3` - Text-to-Speech engine
-- `speechrecognition` - Voice recognition
-- `pyaudio` - Audio input/output
-- `pyautogui` - GUI automation and screenshots
-- `wikipedia` - Wikipedia API integration
-- `pyjokes` - Random joke generation
+2. **Create Virtual Environment (Recommended)**
 
-### **Step 4: Run SaraAI 2.0**
-```bash
-python main.py
-```
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate  # On Windows
+   ```
 
-## 🎯 **Usage Examples**
+3. **Install Dependencies**
 
-### **Basic Interaction Flow**
-1. **Start the application**: Run `python main.py`
-2. **Wait for prompt**: "🎤 Waiting for wake word: 'Hey Sara'..."
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   **Required Packages:**
+   - `pyttsx3` - Text-to-Speech engine
+   - `speechrecognition` - Voice recognition
+   - `pyaudio` - Audio input/output
+   - `pyautogui` - GUI automation and screenshots
+   - `wikipedia` - Wikipedia API integration
+   - `pyjokes` - Random joke generation
+
+4. **Run Sara AI v2.0**
+   ```bash
+   python main.py
+   ```
+
+---
+
+## 🎯 Usage Examples
+
+### Basic Interaction Flow
+
+1. **Start the application**: `python main.py`
+2. **Wait for prompt**: `"🎤 Waiting for wake word: 'Hey Sara'..."`
 3. **Say wake word**: "Hey Sara"
 4. **Give command**: Sara responds "Yes, I'm listening."
-5. **Voice command**: Say any supported command
-6. **Get response**: Sara executes the command and provides audio feedback
+5. **Voice command**: Speak any supported command
+6. **Get response**: Sara executes and provides audio feedback
 
-### **Example Conversations**
+### Example Conversations
 
-**🔍 Web Search Example:**
+**🔍 Web Search:**
+
 ```
 You: "Hey Sara"
 Sara: "Yes, I'm listening."
 You: "search Python tutorials"
 Sara: "Searching for Python tutorials in Google."
-[Opens Google search results in browser]
+[Opens Google search results]
 ```
 
-**📱 Application Launch Example:**
+**📱 Application Launch:**
+
 ```
 You: "Hey Sara"
 Sara: "Yes, I'm listening."
 You: "open notepad"
 Sara: "Opening notepad using Windows search."
-[Notepad application opens]
+[Notepad launches]
 ```
 
-**📚 Wikipedia Search Example:**
+**📚 Wikipedia:**
+
 ```
 You: "Hey Sara"
 Sara: "Yes, I'm listening."
@@ -155,7 +192,8 @@ You: "wikipedia artificial intelligence"
 Sara: "Here's what I found on Wikipedia: [Reads 2-sentence summary]"
 ```
 
-**⏰ Time & Date Example:**
+**⏰ Time & Date:**
+
 ```
 You: "Hey Sara"
 Sara: "Yes, I'm listening."
@@ -163,106 +201,159 @@ You: "time"
 Sara: "The current time is 02:30:45 PM"
 ```
 
-**📸 Screenshot Example:**
-```
-You: "Hey Sara"
-Sara: "Yes, I'm listening."
-You: "screenshot"
-Sara: "Screenshot taken and saved in your Pictures folder."
-```
+**🎵 Music:**
 
-**🎵 Music Example:**
 ```
 You: "Hey Sara"
 Sara: "Yes, I'm listening."
 You: "play music"
 Sara: "Playing music from your Music folder."
-[First music file in Music folder starts playing]
+[First music file starts playing]
 ```
 
-## 🏗️ **Project Architecture**
+---
 
-### **Core Modules**
+## 🏗️ Project Architecture
+
+### Core Modules
 
 **`main.py`** - Main application controller
+
 - Command routing and processing
 - Main application loop
 - Integration of all modules
 
 **`voice_input.py`** - Voice recognition system
+
 - Wake word detection ("Hey Sara")
 - Google Speech Recognition integration
 - Ambient noise adjustment
 - Error handling for microphone issues
 
 **`tts.py`** - Text-to-Speech engine
+
 - Professional voice configuration
 - Dynamic voice selection
 - Speech rate and volume optimization
 - Jarvis-like speaking experience
 
 **`utils.py`** - Utility functions
+
 - Wikipedia search integration
 - Time and date functions
 - Random joke generation
 - Error handling for API calls
 
 **`application_handler.py`** - System application control
+
 - Windows Search integration
 - Application launching
 - Screenshot functionality
 - GUI automation
 
 **`browser_handler.py`** - Web browser control
+
 - Google search functionality
 - URL handling
 - Browser automation
 - Search query processing
 
 **`music_player.py`** - Music playback system
+
 - Music folder detection
 - File existence checking
 - Default music player integration
 - Cross-platform compatibility (Windows focus)
 
 **`app_control.py`** - Alternative application control
+
 - Letter-by-letter typing simulation
 - Enhanced application search
 - Backup application launching method
 
 ---
 
-## 🔧 **Configuration Options**
+## 🔧 Configuration Options
 
-### **TTS Settings (tts.py)**
+### TTS Settings (tts.py)
+
 ```python
 engine.setProperty('rate', 160)     # Speech speed (words per minute)
 engine.setProperty('volume', 1)     # Volume level (0.0 to 1.0)
 # Voice selection: Female voice preferred, falls back to available voice
 ```
 
-### **Wake Word Configuration (voice_input.py)**
+### Wake Word Configuration (voice_input.py)
+
 ```python
 WAKE_WORD = "hey sara"  # Customizable wake word
 ```
 
-### **File Paths**
+### File Paths
+
 - **Screenshots**: `~/Pictures/screenshot.png`
 - **Music**: `~/Music/` (first file in folder)
 
-### **Troubleshooting**:
+---
 
-* If Sara AI is unable to find or open an application, make sure it’s correctly installed and appears in the **Windows Start Menu**.
-* If speech is not working, make sure your audio device is properly configured and your **Python** environment has the required libraries installed.
+## 🛠️ Troubleshooting
+
+### Microphone Not Working
+
+- Check Windows microphone permissions
+- Verify microphone is set as default device
+- Test microphone in Windows settings
+
+### Voice Recognition Issues
+
+- Ensure stable internet connection (for Google Speech Recognition)
+- Speak clearly and distinctly
+- Reduce background noise
+- Check microphone calibration
+
+### Application Launch Failures
+
+- Verify app is installed and in Start Menu
+- Check Windows Search functionality
+- Run as administrator if needed
+
+### PyAudio Installation Issues
+
+- Install Microsoft C++ Build Tools
+- Use pre-compiled PyAudio wheel for Windows
 
 ---
 
-### **Contributing**:
+## 🎯 Key Improvements Over v1.0
 
-Feel free to fork the repository, make changes, and create pull requests. Contributions are always welcome!
-
-### **License**:
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+| Feature              | v1.0         | v2.0                    |
+| -------------------- | ------------ | ----------------------- |
+| Voice Input          | ❌ Text only | ✅ Voice with wake word |
+| Continuous Listening | ❌           | ✅ Always ready         |
+| Music Player         | ❌           | ✅ Full support         |
+| Modular Architecture | Partial      | ✅ Complete             |
+| Error Handling       | Basic        | ✅ Robust               |
+| TTS Quality          | Basic        | ✅ Professional         |
 
 ---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+---
+
+## 👤 Author
+
+**Selva Pandi (Selva.Ux)**
+
+- GitHub: [@SelvaUx](https://github.com/SelvaUx)
+- Instagram: [@selva.ux](https://instagram.com/selva.ux)
+- Email: selva.ux@yahoo.com
+
+---
+
+<div align="center">
+  <p><strong>The Voice Revolution 🎤</strong></p>
+  <p>Made with ❤️ by Selva.Ux</p>
+</div>
